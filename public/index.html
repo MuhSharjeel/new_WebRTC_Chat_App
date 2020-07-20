@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>Video Chat App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="main.css" rel="stylesheet">
+</head>
+
+<body style="background-color:pink; font-family: 'Times New Roman', Times, serif;">
+    <div class="container-fluid">
+        <p>
+            <h1 style="text-align: center; color: aliceblue;background-color: blue;font-family: 'Times New Roman', Times, serif;"> Chat App </h1>
+        </p>
+        <p><b>Enter your Name.</b></p>
+        Name: <input type="text" id="myText" name="fname"><br>
+        <p id="demo" style="font-size: large;text-align: center;"></p>
+        <p id="demo1" style="font-size: large;text-align: center;"></p>
+        <button onclick="myFunction()" id="join">Join</button>
+        <button id="show">show</button>
+        <div class="row h-10 w-100">
+            <div class="col" id="filter">
+            </div>
+            <div class="col">
+                <div class="float-right mt-3" id="theme">
+                </div>
+            </div>
+        </div>
+        <div class="row h-90 w-100">
+            <div class="col-12 col-sm-6 d-flex justify-content-center">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <video class="embed-responsive-item" muted></video>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 d-flex justify-content-center">
+                <div id="peerDiv" class="embed-responsive embed-responsive-16by9">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="bundle.js"></script>
+</body>
+
+</html>
